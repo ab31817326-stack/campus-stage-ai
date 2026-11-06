@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Campus Stage AI | 공연 준비 도우미</title>
+<meta name="description" content="대학생 공연 기획부터 홍보, 발표, 예산까지 한 번에 정리하는 도우미" />
+<style>
+:root{--ink:#1f2440;--soft:#5f6382;--line:#e7e8f2;--bg:#f8f9fd;--accent:#674dea;--light:#f0edff;--pink:#ffdbea}
+*{box-sizing:border-box}body{margin:0;font-family:Pretendard,'Noto Sans KR',Apple SD Gothic Neo,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}header{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:24px 22px} .logo{font-size:18px;font-weight:850;letter-spacing:-.4px}.logo span{color:var(--accent)}.toplabel{font-size:12px;border:1px solid #ded9fb;padding:5px 11px;border-radius:20px;color:var(--accent);background:white} main{max-width:1000px;margin:0 auto;padding:10px 22px 80px}.hero{text-align:center;padding:54px 20px 48px;background:linear-gradient(115deg,#efebff 0%,#ffeef5 57%,#ecf7ff 100%);border-radius:27px;border:1px solid white}.eyebrow{font-size:13px;font-weight:750;color:#7054b3}.hero h1{font-size:clamp(31px,6vw,52px);line-height:1.23;margin:17px 0;letter-spacing:-1.6px}.hero h1 em{font-style:normal;color:#6950e8}.hero p{font-size:15px;color:#555c77;max-width:520px;margin:0 auto}.steps{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}.steps span{font-size:12px;background:#ffffffb9;padding:7px 13px;border-radius:30px;color:#54516e}.content{display:grid;grid-template-columns:330px 1fr;gap:20px;margin-top:24px}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(56,49,109,.035)}h2{font-size:21px;letter-spacing:-.5px;margin:0 0 7px}p.sub{font-size:13px;color:var(--soft);margin:0 0 21px}label{display:block;font-size:13px;font-weight:720;margin:15px 0 5px}.field{width:100%;border:1px solid #dfe1ed;border-radius:11px;padding:12px 13px;outline:none;background:white;color:var(--ink)}.field:focus{border-color:var(--accent);box-shadow:0 0 0 3px #674dea17}.primary{background:var(--accent);color:white;border:0;padding:13px 18px;border-radius:11px;font-weight:760;width:100%;margin-top:20px}.primary:hover{background:#5236d5}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:17px}.tab{border:1px solid #e0dff0;background:white;border-radius:9px;padding:8px 11px;color:#62647b;font-size:12px;font-weight:680}.tab[aria-selected="true"]{background:var(--light);color:var(--accent);border-color:#cfc5ff}.out{white-space:pre-wrap;font-size:14px;line-height:1.9;background:#fcfcff;border:1px solid #eaebf5;border-radius:14px;padding:19px 17px;min-height:280px;margin-top:14px}.out small{font-size:12px;color:var(--soft)}.actions{display:flex;gap:9px;align-items:center;margin-top:13px}.secondary{border:1px solid #d8dbea;background:#fff;color:var(--ink);border-radius:9px;padding:9px 14px;font-size:13px;font-weight:650}.status{color:#63705e;font-size:12px}.hint{font-size:12px;color:#81859a;margin-top:16px}.footer{text-align:center;color:#888ba1;font-size:12px;margin:32px auto 0}.mini{margin-top:19px;display:flex;gap:8px;flex-wrap:wrap}.chip{background:#f4f2ff;padding:6px 10px;border-radius:8px;font-size:12px;color:#715bb0}@media(max-width:770px){.content{grid-template-columns:1fr}.hero{padding:42px 13px}.panel{padding:20px}.toplabel{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="logo">campus <span>stage</span> ai ✦</div><div class="toplabel">학생 프로젝트 · 공연 준비 도우미</div></header>
+<main>
+<section class="hero"><div class="eyebrow">AI Creative Agent Team · DAY 2</div><h1>공연 준비,<br/><em>좀 더 쉽게 해보자!</em></h1><p>작은 음악 공연이나 동아리 행사를 준비할 때 필요한 기획·홍보·발표·예산 내용을 한곳에서 정리해요.</p><div class="steps"><span>🎵 공연 기획</span><span>🪧 홍보 문구</span><span>📊 발표 개요</span><span>🌐 소개 글</span><span>💰 예산 정리</span></div></section>
+<section class="content">
+<div class="panel"><h2>행사 정보 입력</h2><p class="sub">기본 내용을 적고 아래 버튼을 눌러보세요.</p>
+<label for="name">행사 이름</label><input class="field" id="name" maxlength="80" value="캠퍼스 가을 음악회" placeholder="예: 캠퍼스 가을 음악회"/>
+<label for="type">행사 종류</label><select class="field" id="type"><option>대학생 음악 공연</option><option>동아리 발표회</option><option>학교 축제</option><option>소규모 콘서트</option></select>
+<label for="audience">대상</label><input class="field" id="audience" maxlength="60" value="대학생과 친구들"/>
+<label for="place">장소</label><input class="field" id="place" maxlength="80" value="교내 공연장"/>
+<label for="budget">예산 (원)</label><input class="field" id="budget" type="number" min="0" max="1000000000" value="300000" />
+<button class="primary" id="generate">✨ 내용 만들어보기</button><p class="hint">행사 정보를 바꾸면 오른쪽 결과 내용도 바뀝니다.</p></div>
+<div class="panel"><h2>결과 확인하기</h2><p class="sub">원하는 항목을 누르고 내용을 복사해 활용해보세요.</p>
+<div class="tabs" role="tablist" aria-label="결과 종류">
+<button class="tab" role="tab" data-tab="poster" aria-selected="true">포스터</button>
+<button class="tab" role="tab" data-tab="ppt" aria-selected="false">발표</button>
+<button class="tab" role="tab" data-tab="proposal" aria-selected="false">기획서</button>
+<button class="tab" role="tab" data-tab="webpage" aria-selected="false">웹페이지</button>
+<button class="tab" role="tab" data-tab="budget" aria-selected="false">예산</button></div>
+<div class="out" id="output" role="region" aria-live="polite"></div>
+<div class="actions"><button class="secondary" id="copy">📋 결과 복사</button><span class="status" id="status"></span></div><div class="mini"><span class="chip">수업 실습 예시</span><span class="chip">간단한 문구 생성</span><span class="chip">모바일 지원</span></div>
+</div>
+</section><p class="footer">Campus Stage AI · Vibe Coding X Sound · DAY 2</p>
+</main>
+<script>
+(function(){
+let active='poster', texts={};
+const byId=id=>document.getElementById(id);
+const money=v=>Math.max(0,Math.round(Number(v)||0)).toLocaleString('ko-KR');
+function build(){
+const name=byId('name').value.trim()||'우리 공연', type=byId('type').value, audience=byId('audience').value.trim()||'학생', place=byId('place').value.trim()||'학교', total=Math.max(0,Math.round(Number(byId('budget').value)||0));
+const venue=Math.round(total*.3), sound=Math.round(total*.35), print=Math.round(total*.15), misc=total-venue-sound-print;
+texts={
+poster:`🎵 ${name}\n\n음악으로 함께하는 특별한 시간!\n친구들과 즐겁게 공연을 감상해요.\n\n대상: ${audience}\n장소: ${place}\n행사 유형: ${type}\n\n많은 관심과 참여 부탁드립니다!`,
+ppt:`[${name} 발표 구성]\n\n1. 행사 소개\n- ${type}을 기획했습니다.\n\n2. 행사 목적\n- ${audience}이(가) 함께 즐기는 시간을 만듭니다.\n\n3. 주요 프로그램\n- 공연 소개, 무대 진행, 단체 사진\n\n4. 운영 계획\n- 장소: ${place}\n- 예상 예산: ${money(total)}원\n\n5. 기대 효과\n- 학생 간 교류와 문화 활동 활성화`,
+proposal:`[행사 기획서]\n\n행사명: ${name}\n행사 종류: ${type}\n대상: ${audience}\n장소: ${place}\n총예산: ${money(total)}원\n\n기획 목적\n학생들이 음악을 함께 즐길 수 있는 자리를 마련하고자 합니다.\n\n진행 내용\n공연 준비 → 홍보 → 리허설 → 본 공연 → 마무리\n\n기대 효과\n새로운 추억을 만들고 학생들의 참여를 높일 수 있습니다.`,
+webpage:`[웹사이트 소개 문구]\n\n${name}\n\n음악으로 함께 즐기는 우리만의 무대!\n\n${audience}을(를) 위한 ${type}입니다.\n${place}에서 진행되는 특별한 시간을 함께해 주세요.\n\n메뉴: 행사 소개 | 프로그램 | 장소 안내 | 문의`,
+budget:`[간단 예산표]\n\n행사명: ${name}\n총예산: ${money(total)}원\n\n공간 및 준비비   ${money(venue)}원\n음향 및 장비비   ${money(sound)}원\n홍보물 제작비   ${money(print)}원\n기타 운영비     ${money(misc)}원\n------------------------\n합계             ${money(total)}원\n\n예산 범위 내에서 필요한 항목을 우선 정리했습니다.`
+};
+show();byId('status').textContent='새 내용이 만들어졌어요.';
+}
+function show(){byId('output').textContent=texts[active]||'내용 만들어보기를 눌러주세요.';document.querySelectorAll('.tab').forEach(el=>el.setAttribute('aria-selected',String(el.dataset.tab===active)));}
+byId('generate').addEventListener('click',build);
+document.querySelectorAll('.tab').forEach(el=>el.addEventListener('click',()=>{active=el.dataset.tab;show();byId('status').textContent='';}));
+byId('copy').addEventListener('click',async()=>{let value=texts[active]||'';if(!value)return;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);}else{let t=document.createElement('textarea');t.value=value;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();}byId('status').textContent='복사했어요!';}catch(e){byId('status').textContent='텍스트를 길게 눌러 복사해 주세요.';}});
+build();
+})();
+</script>
+</body>
+</html>
